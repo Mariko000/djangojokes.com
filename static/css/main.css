@@ -1,0 +1,53 @@
+body {
+    padding-bottom: 50px;
+  }
+    
+  footer {
+    border-top: 1px solid darkgreen;
+  }
+  
+  header {
+    border-bottom: 1px solid darkgreen;
+  }
+
+  /* static/css/main.css */
+
+/* .logo-o クラスを持つ span のスタイル */
+.logo-o {
+    display: inline-block; /* インライン要素だが幅と高さを持たせる */
+    width: 1em; /* 文字の幅に合わせる（フォントサイズに依存） */
+    height: 1em; /* 文字の高さに合わせる */
+    background-image: url('{% static "images/smiley-face.png" %}'); /* 背景画像として読み込む */
+    background-size: contain; /* 要素に画像を収まるように調整 */
+    background-repeat: no-repeat; /* 繰り返しなし */
+    background-position: center; /* 中央に配置 */
+    /* text-indent: -9999px; */ /* 元の文字を隠す方法1: テキストを視覚的に隠す */
+    font-size: 0; /* 元の文字を隠す方法2: フォントサイズを0にする (推奨) */
+    line-height: 1; /* 行の高さを調整して画像がはみ出さないように */
+    vertical-align: middle; /* 上下中央揃えにする（テキストと揃えるため） */
+}
+
+/* ナビゲーションバーのブランドテキストのスタイル調整（必要であれば） */
+.navbar-brand {
+    display: flex; /* ロゴ画像とテキストを横並びにする */
+    align-items: center; /* 縦方向の中央揃え */
+    font-weight: bold; /* テキストを太字にする */
+    font-size: 1.5rem; /* テキストのサイズを調整 */
+    color: #333; /* テキストの色を調整 */
+    text-decoration: none; /* 下線をなくす */
+}
+
+.navbar-brand img {
+    height: 30px; /* ロゴ画像の高さを調整 */
+    margin-right: 8px; /* ロゴ画像とテキストの間隔 */
+}
+
+/* 必要であれば、全体のタイトルテキストのスタイルも調整 */
+.site-title {
+    color: #333; /* 文字色 */
+    /* その他のスタイル */
+}
+  
+  h2 {
+    font-style: italic;
+  }
