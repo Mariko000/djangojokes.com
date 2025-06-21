@@ -1,6 +1,14 @@
 from django.contrib import admin
 from .models import Joke
 
-admin.site.register(Joke) 
+from .models import Joke
 
-# Register your models here.
+@admin.register(Joke)
+class JokeAdmin(admin.ModelAdmin):
+    model = Joke
+    list_display = ['question', 'created', 'updated']
+
+    def get_readonly_fields(self, request, obj=None):
+        if obj:
+            return ('created', 'updated')
+        return ()

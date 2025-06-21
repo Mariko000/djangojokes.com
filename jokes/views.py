@@ -1,5 +1,5 @@
 from django.views.generic import (
-CreateView, DeleteView, DetailView, ListView, UpdateView
+    CreateView, DeleteView, DetailView, ListView, UpdateView
 )
 from django.urls import reverse_lazy
 
@@ -16,6 +16,9 @@ class JokeDeleteView(DeleteView):
 
 class JokeDetailView(DetailView):
     model = Joke
+    template_name = 'jokes/joke_detail.html'
+    slug_field = 'slug'
+    slug_url_kwarg = 'slug'
 
 
 class JokeListView(ListView):

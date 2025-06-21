@@ -18,7 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-path('admin/', admin.site.urls),
-path('jokes/', include('jokes.urls')),
-path('', include('pages.urls')),
+    path('admin/doc/', include('django.contrib.admindocs.urls')),
+    path('admin/', admin.site.urls), # admin URLは一度だけインクルード
+    path('jokes/', include('jokes.urls', namespace='jokes')),# 名前空間'jokes' を追加
+    path('', include('pages.urls')), # pagesアプリのURLもここにあることを確認
 ]
